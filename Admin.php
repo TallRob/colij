@@ -136,12 +136,8 @@ else
     echo "</td>";
 	echo "</select></td>";
 	
-	echo "<td><input name='Update' type='submit' value='$type' style='padding: 1px 15px;'>";
-	echo "<form action='script/update.php' method='post'>";
-	echo "<input name='userid' type='hidden' value='$row[0]'></input>";
-	echo "<input name='type' type='hidden' value='$type'></input>";
-	echo "</form>";
-	echo "</input></td>";
+	echo "<td><input name='Update' type='submit' style='padding: 1px 15px;'></input>";
+	echo "</td>";
 	echo "</form>";
 	
 	echo "<td>";
