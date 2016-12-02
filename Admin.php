@@ -114,30 +114,30 @@ else
 	{
 	echo "<tr>";
  	echo "<form action='script/update.php' method='post'>";
+	//show user id
 //	echo "<td><input name= 'userid' type='text' value='$row[0]' readonly></input></td>";
 	echo "<td>$row[0]</td>";
+	//show username textbox
 	echo "<td><input name='username' type='text' value='$row[1]'></input></td>";
-	echo "<td><input name='password' type='text' value='$row[2]'</input></td>";
-	
-	echo "<td><select name='type' value='$row[3]'>";
+	//Show password textbox
+	echo "<td><input name='password' type='text' value='$row[2]'></input></td>";
+	//Show access level drop-down
+	echo "<td><select name='type'>";
 	if($row[3]== Admin)
 	{
 	echo "<option value='Guest'>Guest</option>";
 	echo "<option value='Admin' selected>Admin</option>";
-	$type = "Admin";
 	}
-	else{
+	else
+	{
 	echo "<option value='Guest' selected>Guest</option>";
 	echo "<option value='Admin'>Admin</option>";
-	$type = "Guest";
 	}
-	echo "<td>";
-	echo $row[4];
-    echo "</td>";
 	echo "</select></td>";
-	
-	echo "<td><input name='Update' type='submit' style='padding: 1px 15px;'></input>";
-	echo "</td>";
+	//Show date create
+	echo "<td>$row[4]</td>";
+	//Update button
+	echo "<td><input name='Update' type='submit' style='padding: 1px 15px;'></input></td>";
 	echo "</form>";
 	
 	echo "<td>";
